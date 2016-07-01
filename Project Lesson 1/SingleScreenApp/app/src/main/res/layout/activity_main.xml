@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        android:background="#a5acfc">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hanabiLogo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Name of the restaurant -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Hanabi Japanese Restaurant"
+            android:id="@+id/textHanabiName"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_below="@+id/hanabiLogo"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Phone Number of the restaurant -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ic_phone"
+            android:layout_below="@+id/textHanabiName"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/ic_phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="+506 2253 9129"
+            android:id="@+id/textPhone"
+            android:layout_alignTop="@+id/ic_phone"
+            android:layout_toRightOf="@+id/ic_phone"
+            android:layout_marginLeft="20dp" />
+
+        <!-- Website of the restaurant -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ic_website"
+            android:layout_below="@+id/textPhone"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/ic_website" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="http://vivaelmenu.com/place/hanabi-san-pedro/"
+            android:id="@+id/textWebsite"
+            android:layout_alignTop="@+id/ic_website"
+            android:layout_toRightOf="@+id/ic_website"
+            android:layout_marginLeft="20dp" />
+
+        <!-- Address of the restaurant -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ic_address"
+            android:layout_below="@+id/textWebsite"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/ic_address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="San Pedro, Costa Rica"
+            android:id="@+id/textAddress"
+            android:layout_alignTop="@+id/ic_address"
+            android:layout_toRightOf="@+id/ic_address"
+            android:layout_marginLeft="20dp" />
+
+        <!-- Hours of Operation of the restaurant -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ic_info"
+            android:layout_below="@+id/textAddress"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@mipmap/ic_hours" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description:\n\nCome dine in or have a drink at our full bar. Our large selection of sake, shochu and imported beers are a great way to top off your meal! Relax, have fun, do a few sake bombs, and enjoy your night out with friends, family and us.\n\nHours of Operation:\n\nMonday - Saturday 11:00 - 20:00\nSunday Closed"
+            android:id="@+id/textInfo"
+            android:layout_alignTop="@id/ic_info"
+            android:layout_toRightOf="@+id/ic_info"
+            android:layout_marginLeft="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hanabiPicture"
+            android:layout_below="@+id/textInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="We’ve Got The Rolls You Love."
+            android:layout_below="@+id/hanabiPicture"
+            android:id="@+id/textSlogan"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</ScrollView>
