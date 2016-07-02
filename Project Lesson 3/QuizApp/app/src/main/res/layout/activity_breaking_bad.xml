@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Breaking Bad"
+            android:id="@+id/textTitle"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageBreakingBadTitle"
+            android:layout_below="@+id/textTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <!-- Question 1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1. Pregunta 1:"
+            android:id="@+id/textBreakinBadQ1"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/imageBreakingBadTitle"
+            android:layout_alignParentLeft="true" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/radioGroupQ1"
+            android:layout_below="@+id/textBreakinBadQ1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 1"
+                android:id="@+id/radioButtonBBQ1A1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 2"
+                android:id="@+id/radioButtonBBQ1A2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 3"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ1A3"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 4"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ1A4"
+                android:layout_marginLeft="15dp" />
+
+        </RadioGroup>
+
+        <!-- Question 2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="2. Pregunta 2:"
+            android:id="@+id/textBreakinBadQ2"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/radioGroupQ1"
+            android:layout_alignParentLeft="true" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/radioGroupQ2"
+            android:layout_below="@+id/textBreakinBadQ2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 1"
+                android:id="@+id/radioButtonBBQ2A1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 2"
+                android:id="@+id/radioButtonBBQ2A2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 3"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ2A3"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 4"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ2A4"
+                android:layout_marginLeft="15dp" />
+
+        </RadioGroup>
+
+        <!-- Question 3 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="3. Pregunta 3:"
+            android:id="@+id/textBreakinBadQ3"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/radioGroupQ2"
+            android:layout_alignParentLeft="true" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/radioGroupQ3"
+            android:layout_below="@+id/textBreakinBadQ3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 1"
+                android:id="@+id/radioButtonBBQ3A1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 2"
+                android:id="@+id/radioButtonBBQ3A2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 3"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ3A3"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 4"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ3A4"
+                android:layout_marginLeft="15dp" />
+
+        </RadioGroup>
+
+        <!-- Question 4 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="4. Pregunta 4:"
+            android:id="@+id/textBreakinBadQ4"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/radioGroupQ3"
+            android:layout_alignParentLeft="true" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/radioGroupQ4"
+            android:layout_below="@+id/textBreakinBadQ4"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 1"
+                android:id="@+id/radioButtonBBQ4A1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 2"
+                android:id="@+id/radioButtonBBQ4A2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 3"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ4A3"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 4"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ4A4"
+                android:layout_marginLeft="15dp" />
+
+        </RadioGroup>
+
+        <!-- Question 5 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="5. Pregunta 5:"
+            android:id="@+id/textBreakinBadQ5"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/radioGroupQ4"
+            android:layout_alignParentLeft="true" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/radioGroupQ5"
+            android:layout_below="@+id/textBreakinBadQ5"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 1"
+                android:id="@+id/radioButtonBBQ5A1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 2"
+                android:id="@+id/radioButtonBBQ5A2"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 3"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ5A3"
+                android:layout_marginLeft="15dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Respuesta 4"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioButtonBBQ5A4"
+                android:layout_marginLeft="15dp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Submit Answers"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/radioGroupQ5"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</ScrollView>
