@@ -299,13 +299,24 @@
 
         </RadioGroup>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/textResultsBB"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/radioGroupQ5"
+            android:layout_alignParentLeft="true" />
+
         <Button
-            android:id="@+id/buttonSubmit"
+            android:id="@+id/buttonSubmitBB"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Submit Answers"
             android:layout_marginTop="30dp"
-            android:layout_below="@+id/radioGroupQ5"
+            android:onClick="submitAnswerBB"
+            android:layout_below="@+id/textResultsBB"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
 
