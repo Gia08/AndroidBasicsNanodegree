@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="1. Pregunta 1:"
+            android:text="1. Which are House Lannister words?"
             android:id="@+id/textGameOfThronesQ1"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/imageGameOfThronesTitle"
@@ -52,7 +52,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="A Lannister always pays his debts."
                 android:id="@+id/radioButtonGTQ1A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -60,7 +60,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Family, duty, honor"
                 android:id="@+id/radioButtonGTQ1A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -68,7 +68,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Ours is the fury"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ1A3"
                 android:layout_marginLeft="15dp" />
@@ -76,7 +76,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Hear me roar"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ1A4"
                 android:layout_marginLeft="15dp" />
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="2. Pregunta 2:"
+            android:text="2. Which season were all the Stark children born during?"
             android:id="@+id/textGameOfThronesQ2"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupGTQ1"
@@ -106,7 +106,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Winter"
                 android:id="@+id/radioButtonGTQ2A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -114,7 +114,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Spring"
                 android:id="@+id/radioButtonGTQ2A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -122,7 +122,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Summer"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ2A3"
                 android:layout_marginLeft="15dp" />
@@ -130,7 +130,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Autumn"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ2A4"
                 android:layout_marginLeft="15dp" />
@@ -142,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="3. Pregunta 3:"
+            android:text="3. Who was the only one capable of defeating Robert Baratheon's forces during the Battle of Ashford?"
             android:id="@+id/textGameOfThronesQ3"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupGTQ2"
@@ -160,7 +160,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Rhaegar Targaryen"
                 android:id="@+id/radioButtonGTQ3A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -168,7 +168,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Jon Connington"
                 android:id="@+id/radioButtonGTQ3A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -176,7 +176,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Gerold Hightower"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ3A3"
                 android:layout_marginLeft="15dp" />
@@ -184,7 +184,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Randyll Tarly"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ3A4"
                 android:layout_marginLeft="15dp" />
@@ -196,7 +196,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="4. Pregunta 4:"
+            android:text="4. What is the bastard name given to people born in the Crownlands?"
             android:id="@+id/textGameOfThronesQ4"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupGTQ3"
@@ -214,7 +214,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Water"
                 android:id="@+id/radioButtonGTQ4A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -222,7 +222,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Hill"
                 android:id="@+id/radioButtonGTQ4A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -230,7 +230,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Storm"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ4A3"
                 android:layout_marginLeft="15dp" />
@@ -238,7 +238,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Stone"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ4A4"
                 android:layout_marginLeft="15dp" />
@@ -250,7 +250,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="5. Pregunta 5:"
+            android:text="5. Who planned Joffrey Baratheon murder?"
             android:id="@+id/textGameOfThronesQ5"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupGTQ4"
@@ -268,7 +268,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Sansa Stark and Tyrion Lannister"
                 android:id="@+id/radioButtonGTQ5A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -276,7 +276,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Olenna Tyrell and Littlefinger"
                 android:id="@+id/radioButtonGTQ5A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -284,7 +284,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Margaery and Olenna Tyrell"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ5A3"
                 android:layout_marginLeft="15dp" />
@@ -292,20 +292,31 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Loras Tyrell and Varys"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonGTQ5A4"
                 android:layout_marginLeft="15dp" />
 
         </RadioGroup>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/textResultsGT"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/radioGroupGTQ5"
+            android:layout_alignParentLeft="true" />
+
         <Button
-            android:id="@+id/buttonSubmit"
+            android:id="@+id/buttonSubmitGT"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Submit Answers"
             android:layout_marginTop="30dp"
-            android:layout_below="@+id/radioGroupGTQ5"
+            android:onClick="submitAnswerGT"
+            android:layout_below="@+id/textResultsGT"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
 

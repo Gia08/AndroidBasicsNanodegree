@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="1. Pregunta 1:"
+            android:text="1. How much did Walt sell his share of Grey Matter for?"
             android:id="@+id/textBreakinBadQ1"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/imageBreakingBadTitle"
@@ -52,7 +52,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="$1000"
                 android:id="@+id/radioButtonBBQ1A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -60,7 +60,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="$5000"
                 android:id="@+id/radioButtonBBQ1A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -68,7 +68,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="$10000"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ1A3"
                 android:layout_marginLeft="15dp" />
@@ -76,7 +76,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="$25000"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ1A4"
                 android:layout_marginLeft="15dp" />
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="2. Pregunta 2:"
+            android:text="2. What is on the top of Saul's Office?"
             android:id="@+id/textBreakinBadQ2"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupQ1"
@@ -106,7 +106,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Statue of Liberty"
                 android:id="@+id/radioButtonBBQ2A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -114,7 +114,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="A model of Saul"
                 android:id="@+id/radioButtonBBQ2A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -122,7 +122,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Lady Justice"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ2A3"
                 android:layout_marginLeft="15dp" />
@@ -130,7 +130,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="God"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ2A4"
                 android:layout_marginLeft="15dp" />
@@ -142,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="3. Pregunta 3:"
+            android:text="3. How much does Skyler offer to pay for the Car Wash?"
             android:id="@+id/textBreakinBadQ3"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupQ2"
@@ -160,7 +160,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="$679000"
                 android:id="@+id/radioButtonBBQ3A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -168,7 +168,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="$779000"
                 android:id="@+id/radioButtonBBQ3A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -176,7 +176,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="$879000"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ3A3"
                 android:layout_marginLeft="15dp" />
@@ -184,7 +184,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="$979000"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ3A4"
                 android:layout_marginLeft="15dp" />
@@ -196,7 +196,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="4. Pregunta 4:"
+            android:text="4. What is Mike's granddaughter called?"
             android:id="@+id/textBreakinBadQ4"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupQ3"
@@ -214,7 +214,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Maxine"
                 android:id="@+id/radioButtonBBQ4A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -222,7 +222,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Bailee"
                 android:id="@+id/radioButtonBBQ4A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -230,7 +230,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Jenny"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ4A3"
                 android:layout_marginLeft="15dp" />
@@ -238,7 +238,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Kaylee"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ4A4"
                 android:layout_marginLeft="15dp" />
@@ -250,7 +250,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="5. Pregunta 5:"
+            android:text="5. What's the name  of the plant that Brock was poisoned with?"
             android:id="@+id/textBreakinBadQ5"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupQ4"
@@ -268,7 +268,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Moonseed"
                 android:id="@+id/radioButtonBBQ5A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -276,7 +276,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="European Holly"
                 android:id="@+id/radioButtonBBQ5A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -284,7 +284,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Lily of the Valley"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ5A3"
                 android:layout_marginLeft="15dp" />
@@ -292,7 +292,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Black Nightshade"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonBBQ5A4"
                 android:layout_marginLeft="15dp" />

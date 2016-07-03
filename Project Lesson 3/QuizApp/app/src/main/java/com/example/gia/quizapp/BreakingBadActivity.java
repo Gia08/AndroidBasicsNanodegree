@@ -138,44 +138,51 @@ public class BreakingBadActivity extends AppCompatActivity {
             Q4.setTextColor(Color.BLACK);
             Q5.setTextColor(Color.BLACK);
             btnSubmit.setText("Submit Answers");
+            textResults.setText("");
+            counterCorrectAnswers = 0;
             submit = true;
         }
         else{
             int selectedId = radioGroupQ1.getCheckedRadioButtonId();
-            if (selectedId == radioBtnQ1A3.getId()){
+            if (selectedId == radioBtnQ1A2.getId()){
                 counterCorrectAnswers++;
+                Q1.setTextColor(Color.GREEN);
             }
             else{
                 Q1.setTextColor(Color.RED);
             }
 
             selectedId = radioGroupQ2.getCheckedRadioButtonId();
-            if (selectedId == radioBtnQ2A4.getId()){
+            if (selectedId == radioBtnQ2A1.getId()){
                 counterCorrectAnswers++;
+                Q2.setTextColor(Color.GREEN);
             }
             else{
                 Q2.setTextColor(Color.RED);
             }
 
             selectedId = radioGroupQ3.getCheckedRadioButtonId();
-            if (selectedId == radioBtnQ3A2.getId()){
+            if (selectedId == radioBtnQ3A3.getId()){
                 counterCorrectAnswers++;
+                Q3.setTextColor(Color.GREEN);
             }
             else{
                 Q3.setTextColor(Color.RED);
             }
 
             selectedId = radioGroupQ4.getCheckedRadioButtonId();
-            if (selectedId == radioBtnQ4A3.getId()){
+            if (selectedId == radioBtnQ4A4.getId()){
                 counterCorrectAnswers++;
+                Q4.setTextColor(Color.GREEN);
             }
             else{
                 Q4.setTextColor(Color.RED);
             }
 
             selectedId = radioGroupQ5.getCheckedRadioButtonId();
-            if (selectedId == radioBtnQ5A1.getId()){
+            if (selectedId == radioBtnQ5A3.getId()){
                 counterCorrectAnswers++;
+                Q5.setTextColor(Color.GREEN);
             }
             else{
                 Q5.setTextColor(Color.RED);

@@ -1,8 +1,14 @@
 package com.example.gia.quizapp;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -10,6 +16,57 @@ public class HIMYMActivity extends AppCompatActivity {
 
     // Definitions of ImageView variables
     ImageView imageHIMYMTitle;
+
+    // Definition for Radios Groups
+    RadioGroup radioGroupQ1;
+    RadioGroup radioGroupQ2;
+    RadioGroup radioGroupQ3;
+    RadioGroup radioGroupQ4;
+    RadioGroup radioGroupQ5;
+
+
+    // Definition of radio buttons
+    RadioButton radioBtnQ1A1;
+    RadioButton radioBtnQ1A2;
+    RadioButton radioBtnQ1A3;
+    RadioButton radioBtnQ1A4;
+
+    RadioButton radioBtnQ2A1;
+    RadioButton radioBtnQ2A2;
+    RadioButton radioBtnQ2A3;
+    RadioButton radioBtnQ2A4;
+
+    RadioButton radioBtnQ3A1;
+    RadioButton radioBtnQ3A2;
+    RadioButton radioBtnQ3A3;
+    RadioButton radioBtnQ3A4;
+
+    RadioButton radioBtnQ4A1;
+    RadioButton radioBtnQ4A2;
+    RadioButton radioBtnQ4A3;
+    RadioButton radioBtnQ4A4;
+
+    RadioButton radioBtnQ5A1;
+    RadioButton radioBtnQ5A2;
+    RadioButton radioBtnQ5A3;
+    RadioButton radioBtnQ5A4;
+
+    // Definition for the Submit Button
+    Button btnSubmit;
+
+    // Definition for the counter variable
+    int counterCorrectAnswers;
+    boolean submit;
+
+    // Definition of the Questions text views
+    TextView Q1;
+    TextView Q2;
+    TextView Q3;
+    TextView Q4;
+    TextView Q5;
+
+    // Definition of the text results
+    TextView textResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,5 +78,112 @@ public class HIMYMActivity extends AppCompatActivity {
         Picasso.with(this)
                 .load("http://www.gloo.udp.cl/wp-content/uploads/how-i-met-your-mother-banner.png")
                 .into(imageHIMYMTitle);
+
+        // Initialization of the radio groups
+        radioGroupQ1 = (RadioGroup) findViewById(R.id.radioGroupHIMYMQ1);
+        radioGroupQ2 = (RadioGroup) findViewById(R.id.radioGroupHIMYMQ2);
+        radioGroupQ3 = (RadioGroup) findViewById(R.id.radioGroupHIMYMQ3);
+        radioGroupQ4 = (RadioGroup) findViewById(R.id.radioGroupHIMYMQ4);
+        radioGroupQ5 = (RadioGroup) findViewById(R.id.radioGroupHIMYMQ5);
+
+        // Initialization of the radio buttons
+        radioBtnQ1A1 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ1A1);
+        radioBtnQ1A2 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ1A2);
+        radioBtnQ1A3 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ1A3);
+        radioBtnQ1A4 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ1A4);
+
+        radioBtnQ2A1 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ2A1);
+        radioBtnQ2A2 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ2A2);
+        radioBtnQ2A3 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ2A3);
+        radioBtnQ2A4 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ2A4);
+
+        radioBtnQ3A1 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ3A1);
+        radioBtnQ3A2 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ3A2);
+        radioBtnQ3A3 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ3A3);
+        radioBtnQ3A4 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ3A4);
+
+        radioBtnQ4A1 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ4A1);
+        radioBtnQ4A2 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ4A2);
+        radioBtnQ4A3 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ4A3);
+        radioBtnQ4A4 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ4A4);
+
+        radioBtnQ5A1 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ5A1);
+        radioBtnQ5A2 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ5A2);
+        radioBtnQ5A3 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ5A3);
+        radioBtnQ5A4 = (RadioButton) findViewById(R.id.radioButtonHIMYMQ5A4);
+
+        // Initialization of the counter variable
+        counterCorrectAnswers = 0;
+        submit = true;
+
+        // Initialization of the text view
+        Q1 = (TextView) findViewById(R.id.textHIMYMQ1);
+        Q2 = (TextView) findViewById(R.id.textHIMYMQ2);
+        Q3 = (TextView) findViewById(R.id.textHIMYMQ3);
+        Q4 = (TextView) findViewById(R.id.textHIMYMQ4);
+        Q5 = (TextView) findViewById(R.id.textHIMYMQ5);
+
+        // Initialization of the submit button
+        btnSubmit = (Button) findViewById(R.id.buttonSubmitHIMYM);
+
+        // Initialization of results text view
+        textResults = (TextView) findViewById(R.id.textResultsHIMYM);
+    }
+
+    public void submitAnswerHIMYM(View v) {
+        if (!submit) {
+            Q1.setTextColor(Color.BLACK);
+            Q2.setTextColor(Color.BLACK);
+            Q3.setTextColor(Color.BLACK);
+            Q4.setTextColor(Color.BLACK);
+            Q5.setTextColor(Color.BLACK);
+            btnSubmit.setText("Submit Answers");
+            textResults.setText("");
+            counterCorrectAnswers = 0;
+            submit = true;
+        } else {
+            int selectedId = radioGroupQ1.getCheckedRadioButtonId();
+            if (selectedId == radioBtnQ1A2.getId()) {
+                counterCorrectAnswers++;
+                Q1.setTextColor(Color.GREEN);
+            } else {
+                Q1.setTextColor(Color.RED);
+            }
+
+            selectedId = radioGroupQ2.getCheckedRadioButtonId();
+            if (selectedId == radioBtnQ2A1.getId()) {
+                counterCorrectAnswers++;
+                Q2.setTextColor(Color.GREEN);
+            } else {
+                Q2.setTextColor(Color.RED);
+            }
+
+            selectedId = radioGroupQ3.getCheckedRadioButtonId();
+            if (selectedId == radioBtnQ3A3.getId()) {
+                counterCorrectAnswers++;
+                Q3.setTextColor(Color.GREEN);
+            } else {
+                Q3.setTextColor(Color.RED);
+            }
+
+            selectedId = radioGroupQ4.getCheckedRadioButtonId();
+            if (selectedId == radioBtnQ4A4.getId()) {
+                counterCorrectAnswers++;
+                Q4.setTextColor(Color.GREEN);
+            } else {
+                Q4.setTextColor(Color.RED);
+            }
+
+            selectedId = radioGroupQ5.getCheckedRadioButtonId();
+            if (selectedId == radioBtnQ5A3.getId()) {
+                counterCorrectAnswers++;
+                Q5.setTextColor(Color.GREEN);
+            } else {
+                Q5.setTextColor(Color.RED);
+            }
+            textResults.setText("Results: " + counterCorrectAnswers + " of 5.");
+            btnSubmit.setText("Retry");
+            submit = false;
+        }
     }
 }

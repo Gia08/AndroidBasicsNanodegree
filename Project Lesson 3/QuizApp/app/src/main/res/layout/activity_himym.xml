@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="1. Pregunta 1:"
+            android:text="1. When Lily, Marshall and Ted dressed as Lady and the Tramp and the bowl of spaghetti who was the bowl of spaghetti?"
             android:id="@+id/textHIMYMQ1"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/imageHIMYMTitle"
@@ -52,7 +52,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Marshall"
                 android:id="@+id/radioButtonHIMYMQ1A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -60,7 +60,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Ted"
                 android:id="@+id/radioButtonHIMYMQ1A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -68,7 +68,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Robin"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ1A3"
                 android:layout_marginLeft="15dp" />
@@ -76,7 +76,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Barney"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ1A4"
                 android:layout_marginLeft="15dp" />
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="2. Pregunta 2:"
+            android:text="2. What is Robin's middle name?"
             android:id="@+id/textHIMYMQ2"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupHIMYMQ1"
@@ -106,7 +106,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Charles"
                 android:id="@+id/radioButtonHIMYMQ2A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -114,7 +114,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Joseph"
                 android:id="@+id/radioButtonHIMYMQ2A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -122,7 +122,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Marie"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ2A3"
                 android:layout_marginLeft="15dp" />
@@ -130,7 +130,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Scherbatsky"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ2A4"
                 android:layout_marginLeft="15dp" />
@@ -142,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="3. Pregunta 3:"
+            android:text="3. In season seven, which character announces that she is pregnant?"
             android:id="@+id/textHIMYMQ3"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupHIMYMQ2"
@@ -160,7 +160,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Ted's girlfriend"
                 android:id="@+id/radioButtonHIMYMQ3A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -168,7 +168,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Robin"
                 android:id="@+id/radioButtonHIMYMQ3A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -176,7 +176,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Lily"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ3A3"
                 android:layout_marginLeft="15dp" />
@@ -184,7 +184,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Patrice"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ3A4"
                 android:layout_marginLeft="15dp" />
@@ -196,7 +196,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="4. Pregunta 4:"
+            android:text="4. Who does Stella leave Ted for?"
             android:id="@+id/textHIMYMQ4"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupHIMYMQ3"
@@ -214,7 +214,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="No one"
                 android:id="@+id/radioButtonHIMYMQ4A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -222,7 +222,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Marshall"
                 android:id="@+id/radioButtonHIMYMQ4A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -230,7 +230,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Barney"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ4A3"
                 android:layout_marginLeft="15dp" />
@@ -238,7 +238,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Tony"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ4A4"
                 android:layout_marginLeft="15dp" />
@@ -250,7 +250,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="5. Pregunta 5:"
+            android:text="5. Who did Barney lose his virginity to?"
             android:id="@+id/textHIMYMQ5"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/radioGroupHIMYMQ4"
@@ -268,7 +268,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 1"
+                android:text="Shannon"
                 android:id="@+id/radioButtonHIMYMQ5A1"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -276,7 +276,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 2"
+                android:text="Nora"
                 android:id="@+id/radioButtonHIMYMQ5A2"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp" />
@@ -284,7 +284,7 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 3"
+                android:text="Rhonda"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ5A3"
                 android:layout_marginLeft="15dp" />
@@ -292,20 +292,31 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Respuesta 4"
+                android:text="Quinn"
                 android:layout_marginTop="5dp"
                 android:id="@+id/radioButtonHIMYMQ5A4"
                 android:layout_marginLeft="15dp" />
 
         </RadioGroup>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=""
+            android:id="@+id/textResultsHIMYM"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/radioGroupHIMYMQ5"
+            android:layout_alignParentLeft="true" />
+
         <Button
-            android:id="@+id/buttonSubmit"
+            android:id="@+id/buttonSubmitHIMYM"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Submit Answers"
+            android:onClick="submitAnswerHIMYM"
             android:layout_marginTop="30dp"
-            android:layout_below="@+id/radioGroupHIMYMQ5"
+            android:layout_below="@+id/textResultsHIMYM"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
 
