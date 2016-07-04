@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_events"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_welcome"
+        android:title="Welcome to Costa Rica!" />
+        <item
+            android:id="@+id/nav_places"
+            android:title="Top 10 Places" />
+        <item
+            android:id="@+id/nav_hotels"
+            android:title="Top 10 Hotels" />
+        <item
+            android:id="@+id/nav_food"
+            android:title="Top 10 Food" />
+
+    </group>
+
+</menu>
