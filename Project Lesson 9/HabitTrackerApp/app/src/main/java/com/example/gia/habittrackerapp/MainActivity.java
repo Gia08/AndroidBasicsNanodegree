@@ -69,5 +69,8 @@ public class MainActivity extends AppCompatActivity {
         // Remove all entries
         habitDataHelper.deleteAllEntries();
 
+        //Delete the database
+        habitDataHelper.deleteDatabase();
+
     }
 }
