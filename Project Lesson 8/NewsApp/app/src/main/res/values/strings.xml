@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="button_search">Search!</string>
+    <string name="results_title">Results</string>
+    <string name="search_title">Welcome to the news search!</string>
+    <string name="results_info">For more information, please click in the item.</string>
+</resources>
