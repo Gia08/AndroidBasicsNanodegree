@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -73,7 +72,6 @@ public class ListBooks extends AppCompatActivity {
                 try {
                     JSONObject jsonResult = new JSONObject(stream);
                     int totalItems = jsonResult.getInt("totalItems");
-                    Log.v("DEBUG", "totalItems " + totalItems);
                     if (totalItems != 0) {
                         JSONArray booksArray = jsonResult.getJSONArray("items");
                         for (int i = 0; i < booksArray.length(); i++) {
@@ -92,8 +90,6 @@ public class ListBooks extends AppCompatActivity {
                             }
                             title = bookDetails.getString("title");
 
-                            Log.v("DEBUG", "title " + title);
-                            Log.v("DEBUG", "author " + author);
                             booksMap.put("title", title);
                             booksMap.put("author", author);
                             book_list.add(booksMap);
