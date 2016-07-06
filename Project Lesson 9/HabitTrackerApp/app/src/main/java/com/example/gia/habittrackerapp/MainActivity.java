@@ -65,5 +65,9 @@ public class MainActivity extends AppCompatActivity {
         Log.v("TEST", "Habit Name = " + cursor.getString(1));
         Log.v("TEST", "Habit Times per Day = " + cursor.getString(2));
 
+
+        // Remove all entries
+        habitDataHelper.deleteAllEntries();
+
     }
 }

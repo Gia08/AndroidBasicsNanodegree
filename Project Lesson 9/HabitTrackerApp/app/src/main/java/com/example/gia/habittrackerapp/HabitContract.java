@@ -10,8 +10,8 @@ public final class HabitContract {
     public HabitContract(){}
 
     public static abstract class habitContractTable implements BaseColumns {
+
         public static final String TABLE_NAME = "habitsTracker";
-        public static final String HABIT_ID = "habitID";
         public static final String HABIT_NAME = "habitName";
         public static final String HABIT_COUNTER = "habitCounter";
 
@@ -30,7 +30,6 @@ public final class HabitContract {
         public static final String SQL_CREATE_ENTRY=
                 "CREATE TABLE " + habitContractTable.TABLE_NAME + " (" +
                         habitContractTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                        habitContractTable.HABIT_ID + TEXT_TYPE + COMMA_SEP +
                         habitContractTable.HABIT_NAME + TEXT_TYPE + COMMA_SEP +
                         habitContractTable.HABIT_COUNTER +  INTEGER_TYPE + " )";
 

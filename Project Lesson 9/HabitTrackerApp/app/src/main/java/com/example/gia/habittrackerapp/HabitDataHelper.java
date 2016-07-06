@@ -48,6 +48,7 @@ public class HabitDataHelper extends SQLiteOpenHelper {
                 new String[]{habitName}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
+        db.close();
         return cursor;
     }
 
@@ -60,6 +61,19 @@ public class HabitDataHelper extends SQLiteOpenHelper {
         values.put(HabitContract.habitContractTable.HABIT_NAME, habit.getHabitName());
         values.put(HabitContract.habitContractTable.HABIT_COUNTER, habit.getHabitCounter() + 1);
         db.update(HabitContract.habitContractTable.TABLE_NAME, values, HabitContract.habitContractTable.HABIT_NAME + " = '" + habitName + "'", null);
+        db.close();
+    }
+
+    // Delete all entries of the database
+    public void deleteAllEntries(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("delete from "+ HabitContract.habitContractTable.TABLE_NAME);
+        db.close();
+    }
+
+    // Delete database
+    public void deleteDatabase(){
+        this.deleteDatabase();
     }
 
 }

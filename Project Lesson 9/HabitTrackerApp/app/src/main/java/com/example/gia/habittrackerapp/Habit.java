@@ -5,7 +5,6 @@ package com.example.gia.habittrackerapp;
  */
 public class Habit {
 
-    private String habitID;
     private String habitName;
     private int habitCounter;
 
@@ -16,14 +15,6 @@ public class Habit {
     public Habit(String habitName, int habitCounter){
         this.habitName = habitName;
         this.habitCounter = habitCounter;
-    }
-
-    public String getHabitID() {
-        return habitID;
-    }
-
-    public void setHabitID(String habitID) {
-        this.habitID = habitID;
     }
 
     public String getHabitName() {
