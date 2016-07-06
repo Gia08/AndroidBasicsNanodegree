@@ -1,14 +1,19 @@
 package com.example.gia.booklistingapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,6 +29,9 @@ public class ListBooks extends AppCompatActivity {
     TextView textResults;
 
     ArrayList<HashMap<String, String>> book_list;
+    ArrayList<ListAdapter> list_adapter;
+
+    ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,10 @@ public class ListBooks extends AppCompatActivity {
         listBooks = (ListView) findViewById(R.id.book_list);
 
         book_list = new ArrayList<HashMap<String, String>>();
+        list_adapter =  new ArrayList<ListAdapter>();
+
+        progress = new ProgressDialog(this);
+        progress.setTitle("Loading");
 
         // Create the Intent to get the input argument in the previous activity
         Intent intent = getIntent();
@@ -42,24 +54,20 @@ public class ListBooks extends AppCompatActivity {
         new getBooksInformation().execute(url);
     }
 
-    private class getBooksInformation extends AsyncTask<String, Void, String> {
+    private class getBooksInformation extends AsyncTask<String, Void, Boolean> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            progress.show();
         }
 
-        protected String doInBackground(String... strings) {
+        protected Boolean doInBackground(String... strings) {
             String stream = null;
             String URLString = strings[0];
-            BookInformationHandler bookHandler = new BookInformationHandler();
-            stream = bookHandler.getStreamData(URLString);
-            return stream;
-        }
-
-        protected void onPostExecute(String stream) {
-
             String author = "";
             String title = "";
+            BookInformationHandler bookHandler = new BookInformationHandler();
+            stream = bookHandler.getStreamData(URLString);
 
             if (stream != null) {
                 try {
@@ -96,15 +104,33 @@ public class ListBooks extends AppCompatActivity {
                                     new String[]{"title", "author"},
                                     new int[]{R.id.book_title, R.id.book_author});
 
-                            listBooks.setAdapter(listAdapter);
+                            list_adapter.add(listAdapter);
                         }
                     }
                     else{
-                        textResults.setText("No results found.");
+                        progress.dismiss();
+                        return false;
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    progress.dismiss();
+                    return false;
                 }
+            }
+            progress.dismiss();
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean result) {
+            if (result){
+                for (int i = 0; i < list_adapter.size(); i ++){
+                    listBooks.setAdapter(list_adapter.get(i));
+                }
+            }
+            else{
+                textResults.setText("No results found.");
+                Toast.makeText(ListBooks.this, "Search failed!", Toast.LENGTH_LONG).show();
             }
         }
     }
