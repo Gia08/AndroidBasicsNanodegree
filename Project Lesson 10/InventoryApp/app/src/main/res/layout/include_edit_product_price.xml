@@ -22,11 +22,11 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Product Price"
+        android:hint="New Product Price"
         android:id="@+id/inputEditPrice"
         android:layout_marginTop="44dp"
-        android:layout_below="@+id/inputEditPriceName"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textProductPriceTitle" />
 
     <Button
         android:layout_width="wrap_content"
@@ -38,15 +38,5 @@
         android:layout_below="@+id/inputEditPrice"
         android:layout_alignLeft="@+id/inputEditPrice"
         android:layout_alignStart="@+id/inputEditPrice" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Product Name"
-        android:id="@+id/inputEditPriceName"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/textProductPriceTitle"
-        android:layout_alignRight="@+id/inputEditPrice"
-        android:layout_alignEnd="@+id/inputEditPrice" />
 
 </RelativeLayout>

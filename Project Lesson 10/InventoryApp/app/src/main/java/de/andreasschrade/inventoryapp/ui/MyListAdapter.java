@@ -24,13 +24,10 @@ import de.andreasschrade.inventoryapp.util.ProductDataHelper;
  */
 public class MyListAdapter extends BaseAdapter {
 
-    private static final String TAG = MyListAdapter.class.getSimpleName();
     List<Product> listArray;
-    int newQuantity;
 
     public MyListAdapter(List<Product> listArray) {
         this.listArray = new ArrayList<Product>(listArray);
-        newQuantity= 0;
     }
 
     @Override
@@ -67,31 +64,47 @@ public class MyListAdapter extends BaseAdapter {
         final TextView productPrice = (TextView) convertView.findViewById(R.id.productPrice);
         productPrice.setText("$" + product.getProductPrice());
 
-        Button button = (Button) convertView.findViewById(R.id.listItemButton);
+        Button btnSaleProduct = (Button) convertView.findViewById(R.id.listItemButton);
 
         this.notifyDataSetChanged();
 
-        newQuantity = product.getProductQuantity();
-        button.setOnClickListener(new View.OnClickListener() {
+        btnSaleProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 ProductDataHelper productDataHelper = new ProductDataHelper(view.getContext());
-                if (newQuantity == 0) {
+                if (product.getProductQuantity() == 0) {
                     Toast.makeText(container.getContext(), "No more stock of " + product.getProductName(), Toast.LENGTH_SHORT).show();
                 }
                 else {
                     productDataHelper.decrementProductQuantity(product.getProductName());
-                    newQuantity = newQuantity - 1;
-                    productAvailable.setText("" + newQuantity);
+                    productAvailable.setText("" + product.getProductQuantity());
                     Toast.makeText(container.getContext(), "Quantity for " + product.getProductName() + " decremented", Toast.LENGTH_SHORT).show();
                 }
-                productAvailable.setText(""+newQuantity);
+                productAvailable.setText(""+ product.getProductQuantity());
                 productDataHelper.close();
+                Intent intent = new Intent(view.getContext(), ListProductsActivity.class);
+                view.getContext().startActivity(intent);
+
+            }
+        });
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent details = new Intent(container.getContext(), ProductDetailActivity.class);
+                String productQuantity = Integer.toString(product.getProductQuantity());
+                details.putExtra("productName", product.getProductName());
+                details.putExtra("productQuantity", productQuantity);
+                details.putExtra("productPrice", product.getProductPrice());
+                details.putExtra("productEmail", product.getProductEmail());
+                container.getContext().startActivity(details);
 
             }
         });
     return convertView;
     }
+
 
 }

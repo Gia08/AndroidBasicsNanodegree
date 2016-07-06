@@ -7,17 +7,8 @@
             android:id="@+id/nav_add"
             android:title="@string/nav_add_text" />
         <item
-            android:id="@+id/nav_remove"
-            android:title="@string/nav_remove_text" />
-        <item
             android:id="@+id/nav_list"
         android:title="@string/nav_get_text" />
-        <item
-            android:id="@+id/nav_edit_price"
-            android:title="@string/nav_edit_price_text" />
-        <item
-            android:id="@+id/nav_increment_quantity"
-            android:title="@string/nav_increment_quantity_text" />
 
     </group>
 

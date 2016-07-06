@@ -1,7 +1,7 @@
 package de.andreasschrade.inventoryapp.ui;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,24 +12,24 @@ import android.widget.Toast;
 import butterknife.ButterKnife;
 import de.andreasschrade.inventoryapp.R;
 import de.andreasschrade.inventoryapp.ui.base.BaseActivity;
-import de.andreasschrade.inventoryapp.util.Product;
 import de.andreasschrade.inventoryapp.util.ProductDataHelper;
 
 public class IncrementProductQuantity extends BaseActivity {
 
     // Definition of the variables
-    EditText inputProductName;
     EditText inputProductQuantity;
+    String productName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_increment_product_quantity);
-        ButterKnife.bind(this);
         setupToolbar();
 
+        Intent myIntent = getIntent();
+        productName = myIntent.getStringExtra("productName");
+
         // Initialization of the variables
-        inputProductName = (EditText) findViewById(R.id.inputIncrementProductName);
         inputProductQuantity = (EditText) findViewById(R.id.inputIncrementQuantity);
     }
 
@@ -55,10 +55,6 @@ public class IncrementProductQuantity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected int getSelfNavDrawerItem() {
-        return R.id.nav_increment_quantity;
-    }
 
     @Override
     public boolean providesActivityToolbar() {
@@ -67,19 +63,20 @@ public class IncrementProductQuantity extends BaseActivity {
 
     public void incrementProductQuantity(View v){
 
-        if (inputProductName.getText().toString().matches("") |
-            inputProductQuantity.getText().toString().matches("")) {
+        if (inputProductQuantity.getText().toString().matches("")) {
 
             Toast.makeText(IncrementProductQuantity.this, "Please fill all the information!", Toast.LENGTH_LONG).show();
         }
         else {
             ProductDataHelper productDataHelper = new ProductDataHelper(this);
-            String productName = inputProductName.getText().toString();
             int productQuantity = Integer.parseInt(inputProductQuantity.getText().toString());
             productDataHelper.incrementProductQuantity(productName, productQuantity);
-            inputProductName.setText("");
             inputProductQuantity.setText("");
             Toast.makeText(IncrementProductQuantity.this, "Product Quantity changed!", Toast.LENGTH_LONG).show();
+
+            IncrementProductQuantity.this.finish();
+            Intent intent = new Intent(v.getContext(), ListProductsActivity.class);
+            startActivity(intent);
         }
 
     }

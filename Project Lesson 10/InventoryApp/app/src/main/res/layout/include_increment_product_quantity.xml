@@ -25,7 +25,7 @@
         android:hint="Quantity you want to increment"
         android:id="@+id/inputIncrementQuantity"
         android:layout_marginTop="35dp"
-        android:layout_below="@+id/inputIncrementProductName"
+        android:layout_below="@+id/textIncrementTitle"
         android:layout_alignRight="@+id/textIncrementTitle"
         android:layout_alignEnd="@+id/textIncrementTitle" />
 
@@ -34,18 +34,9 @@
         android:layout_height="wrap_content"
         android:text="Apply!"
         android:id="@+id/btnIncrement"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="46dp"
         android:onClick="incrementProductQuantity"
-        android:layout_below="@+id/inputIncrementProductName"
+        android:layout_below="@+id/inputIncrementQuantity"
         android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Product Name"
-        android:id="@+id/inputIncrementProductName"
-        android:layout_below="@+id/textIncrementTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp" />
 
 </RelativeLayout>

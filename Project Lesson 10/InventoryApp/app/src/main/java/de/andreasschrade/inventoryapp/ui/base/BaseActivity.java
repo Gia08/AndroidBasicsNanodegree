@@ -15,7 +15,6 @@ import de.andreasschrade.inventoryapp.ui.AddProductActivity;
 import de.andreasschrade.inventoryapp.ui.EditProductPriceActivity;
 import de.andreasschrade.inventoryapp.ui.IncrementProductQuantity;
 import de.andreasschrade.inventoryapp.ui.ListProductsActivity;
-import de.andreasschrade.inventoryapp.ui.RemoveProductActivity;
 
 
 /**
@@ -104,15 +103,6 @@ public abstract class BaseActivity extends AppCompatActivity {
 
             case R.id.nav_add:
                 startActivity(new Intent(this, AddProductActivity.class));
-                break;
-            case R.id.nav_edit_price:
-                startActivity(new Intent(this, EditProductPriceActivity.class));
-                break;
-            case R.id.nav_increment_quantity:
-                startActivity(new Intent(this, IncrementProductQuantity.class));
-                break;
-            case R.id.nav_remove:
-                startActivity(new Intent(this, RemoveProductActivity.class));
                 break;
             case R.id.nav_list:
                 startActivity(new Intent(this, ListProductsActivity.class));

@@ -14,6 +14,7 @@ public class ProductDBContract {
         public static final String PRODUCT_NAME = "productName";
         public static final String PRODUCT_QUANTITY = "productQuantity";
         public static final String PRODUCT_PRICE= "productPrice";
+        public static final String PRODUCT_EMAIL= "productEmail";
 
         private static final String TEXT_TYPE = " TEXT NOT NULL";
         private static final String INTEGER_TYPE = " INTEGER DEFAULT 0";
@@ -23,7 +24,8 @@ public class ProductDBContract {
                 _ID,
                 PRODUCT_NAME,
                 PRODUCT_QUANTITY,
-                PRODUCT_PRICE
+                PRODUCT_PRICE,
+                PRODUCT_EMAIL
         };
 
 
@@ -33,7 +35,8 @@ public class ProductDBContract {
                         productTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                         productTable.PRODUCT_NAME + TEXT_TYPE + COMMA_SEP +
                         productTable.PRODUCT_QUANTITY + INTEGER_TYPE + COMMA_SEP +
-                        productTable.PRODUCT_PRICE +  TEXT_TYPE + " )";
+                        productTable.PRODUCT_PRICE +  TEXT_TYPE + COMMA_SEP +
+                        productTable.PRODUCT_EMAIL +  TEXT_TYPE + " )";
 
         // Set the drop table sentence
         public static final String SQL_DELETE_TABLE =

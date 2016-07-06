@@ -10,14 +10,15 @@
         <activity android:name=".ui.ListProductsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ui.AddProductActivity" />
         <activity android:name=".ui.EditProductPriceActivity" />
-        <activity android:name=".ui.RemoveProductActivity" />
         <activity android:name=".ui.IncrementProductQuantity" />
+        <activity android:name=".ui.ProductDetailActivity"></activity>
     </application>
 
 </manifest>

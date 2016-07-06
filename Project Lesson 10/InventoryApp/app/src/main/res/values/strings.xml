@@ -21,5 +21,6 @@
     <string name="quantity">Quantity</string>
     <string name="priceTitle">Price</string>
     <string name="name">Name</string>
+    <string name="product_name">Product Name</string>
 
 </resources>

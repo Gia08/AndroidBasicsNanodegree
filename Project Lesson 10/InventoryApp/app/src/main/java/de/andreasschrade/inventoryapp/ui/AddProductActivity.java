@@ -1,16 +1,13 @@
 package de.andreasschrade.inventoryapp.ui;
 
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import butterknife.ButterKnife;
 import de.andreasschrade.inventoryapp.R;
 import de.andreasschrade.inventoryapp.ui.base.BaseActivity;
 import de.andreasschrade.inventoryapp.util.Product;
@@ -22,17 +19,18 @@ public class AddProductActivity extends BaseActivity {
     EditText inputProductName;
     EditText inputProductQuantity;
     EditText inputProductPrice;
+    EditText inputProductEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
-        ButterKnife.bind(this);
 
         // Initialization of the variables
         inputProductName = (EditText) findViewById(R.id.inputProductName);
         inputProductQuantity = (EditText) findViewById(R.id.inputProductQuantity);
         inputProductPrice = (EditText) findViewById(R.id.inputProductPrice);
+        inputProductEmail = (EditText) findViewById(R.id.inputEmail);
 
         setupToolbar();
     }
@@ -74,6 +72,7 @@ public class AddProductActivity extends BaseActivity {
 
         if (inputProductName.getText().toString().matches("") |
             inputProductQuantity.getText().toString().matches("") |
+            inputProductEmail.getText().toString().matches("") |
             inputProductPrice.getText().toString().matches("")) {
 
             Toast.makeText(AddProductActivity.this, "Please fill all the information!", Toast.LENGTH_LONG).show();
@@ -83,10 +82,12 @@ public class AddProductActivity extends BaseActivity {
             String productName = inputProductName.getText().toString();
             int productQuantity = Integer.parseInt(inputProductQuantity.getText().toString());
             String productPrice = inputProductPrice.getText().toString();
-            productDataHelper.addNewProduct(new Product(productName, productQuantity, productPrice));
+            String productEmail = inputProductEmail.getText().toString();
+            productDataHelper.addNewProduct(new Product(productName, productQuantity, productPrice, productEmail));
             inputProductName.setText("");
             inputProductQuantity.setText("");
             inputProductPrice.setText("");
+            inputProductEmail.setText("");
             Toast.makeText(AddProductActivity.this, "Product added!", Toast.LENGTH_LONG).show();
         }
 
