@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ui.EditProductPriceActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/nav_edit_price_text"
+        android:id="@+id/textProductPriceTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Product Price"
+        android:id="@+id/inputEditPrice"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/inputEditPriceName"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply Change!"
+        android:id="@+id/btnProductPrice"
+        android:layout_marginTop="39dp"
+        android:onClick="editProductPrice"
+        android:layout_below="@+id/inputEditPrice"
+        android:layout_alignLeft="@+id/inputEditPrice"
+        android:layout_alignStart="@+id/inputEditPrice" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Product Name"
+        android:id="@+id/inputEditPriceName"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/textProductPriceTitle"
+        android:layout_alignRight="@+id/inputEditPrice"
+        android:layout_alignEnd="@+id/inputEditPrice" />
+
+</RelativeLayout>
