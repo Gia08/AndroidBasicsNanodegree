@@ -10,8 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,12 +72,14 @@ public class MyListAdapter extends BaseAdapter {
 
                 ProductDataHelper productDataHelper = new ProductDataHelper(view.getContext());
                 if (product.getProductQuantity() == 0) {
-                    Toast.makeText(container.getContext(), "No more stock of " + product.getProductName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(container.getContext(), "No more stock of " +
+                            product.getProductName(), Toast.LENGTH_SHORT).show();
                 }
                 else {
                     productDataHelper.decrementProductQuantity(product.getProductName());
                     productAvailable.setText("" + product.getProductQuantity());
-                    Toast.makeText(container.getContext(), "Quantity for " + product.getProductName() + " decremented", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(container.getContext(), "Quantity for " +
+                            product.getProductName() + " decremented", Toast.LENGTH_SHORT).show();
                 }
                 productAvailable.setText(""+ product.getProductQuantity());
                 productDataHelper.close();
@@ -99,6 +99,7 @@ public class MyListAdapter extends BaseAdapter {
                 details.putExtra("productQuantity", productQuantity);
                 details.putExtra("productPrice", product.getProductPrice());
                 details.putExtra("productEmail", product.getProductEmail());
+                details.putExtra("productUri", product.getProductUri());
                 container.getContext().startActivity(details);
 
             }

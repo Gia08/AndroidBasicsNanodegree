@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import butterknife.ButterKnife;
 import de.andreasschrade.inventoryapp.R;
 import de.andreasschrade.inventoryapp.ui.base.BaseActivity;
 import de.andreasschrade.inventoryapp.util.ProductDataHelper;

@@ -22,5 +22,15 @@
     <string name="priceTitle">Price</string>
     <string name="name">Name</string>
     <string name="product_name">Product Name</string>
+    <string name="add_image">Add Image</string>
+    <string name="hint_price">Product Price</string>
+    <string name="hint_name">Product Name</string>
+    <string name="hint_quantity">Product Quantity</string>
+    <string name="hint_email">Product Email</string>
+    <string name="hint_new_price">New Product Price</string>
+    <string name="hint_increment">Quantity you want to increment</string>
+    <string name="order_more">Order More</string>
+    <string name="contact">Contact</string>
+    <string name="apply_change">Apply Change!</string>
 
 </resources>

@@ -46,6 +46,7 @@ public class ProductDataHelper extends SQLiteOpenHelper {
         values.put(ProductDBContract.productTable.PRODUCT_QUANTITY, product.getProductQuantity());
         values.put(ProductDBContract.productTable.PRODUCT_PRICE, product.getProductPrice());
         values.put(ProductDBContract.productTable.PRODUCT_EMAIL, product.getProductEmail());
+        values.put(ProductDBContract.productTable.PRODUCT_URI, product.getProductUri());
         db.insert(ProductDBContract.productTable.TABLE_NAME, null, values);
         db.close();
     }
@@ -53,7 +54,8 @@ public class ProductDataHelper extends SQLiteOpenHelper {
     // Delete Product from the Product Inventory Database
     public void removeNewProduct(String productName) {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
-        sqLiteDatabase.delete(ProductDBContract.productTable.TABLE_NAME, ProductDBContract.productTable.PRODUCT_NAME + " = '" + productName + "'", null);
+        sqLiteDatabase.delete(ProductDBContract.productTable.TABLE_NAME,
+                ProductDBContract.productTable.PRODUCT_NAME + " = '" + productName + "'", null);
         sqLiteDatabase.close();
     }
 
@@ -79,7 +81,8 @@ public class ProductDataHelper extends SQLiteOpenHelper {
         if (cursor .moveToFirst()) {
 
             while (cursor.isAfterLast() == false) {
-                Product product = new Product(cursor.getString(1),cursor.getInt(2),cursor.getString(3),cursor.getString(4));
+                Product product = new Product(cursor.getString(1),cursor.getInt(2),
+                        cursor.getString(3),cursor.getString(4), cursor.getString(5));
                 listProducts.add(product);
                 Log.v("TEST",product.toString());
                 cursor.moveToNext();
@@ -94,14 +97,17 @@ public class ProductDataHelper extends SQLiteOpenHelper {
     public void modifyProductPrice(String productName, String productPrice) {
         Cursor cursor = getProductInformation(productName);
         if (cursor != null){
-            Product product = new Product(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getString(3));
+            Product product = new Product(cursor.getString(1), cursor.getInt(2),
+                    cursor.getString(3), cursor.getString(4),cursor.getString(5));
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues values = new ContentValues();
             values.put(ProductDBContract.productTable.PRODUCT_NAME, product.getProductName());
             values.put(ProductDBContract.productTable.PRODUCT_QUANTITY, product.getProductQuantity());
             values.put(ProductDBContract.productTable.PRODUCT_PRICE, productPrice);
             values.put(ProductDBContract.productTable.PRODUCT_EMAIL, product.getProductEmail());
-            db.update(ProductDBContract.productTable.TABLE_NAME, values, ProductDBContract.productTable.PRODUCT_NAME + " = '" + productName + "'", null);
+            values.put(ProductDBContract.productTable.PRODUCT_EMAIL, product.getProductUri());
+            db.update(ProductDBContract.productTable.TABLE_NAME, values,
+                    ProductDBContract.productTable.PRODUCT_NAME + " = '" + productName + "'", null);
             db.close();
         }
     }
@@ -109,7 +115,8 @@ public class ProductDataHelper extends SQLiteOpenHelper {
     // Increment Product Quantity
     public void incrementProductQuantity(String productName, int quantity) {
         Cursor cursor = getProductInformation(productName);
-        Product product = new Product(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getString(4));
+        Product product = new Product(cursor.getString(1), cursor.getInt(2),
+                cursor.getString(3), cursor.getString(4), cursor.getString(5));
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         int totalQuantity = quantity + product.getProductQuantity();
@@ -117,20 +124,24 @@ public class ProductDataHelper extends SQLiteOpenHelper {
         values.put(ProductDBContract.productTable.PRODUCT_QUANTITY,  + totalQuantity);
         values.put(ProductDBContract.productTable.PRODUCT_PRICE, product.getProductPrice());
         values.put(ProductDBContract.productTable.PRODUCT_EMAIL, product.getProductEmail());
-        db.update(ProductDBContract.productTable.TABLE_NAME, values, ProductDBContract.productTable.PRODUCT_NAME + " = '" + productName + "'", null);
+        values.put(ProductDBContract.productTable.PRODUCT_URI, product.getProductUri());
+        db.update(ProductDBContract.productTable.TABLE_NAME, values,
+                ProductDBContract.productTable.PRODUCT_NAME + " = '" + productName + "'", null);
         db.close();
     }
 
     // Decrement Product Quantity
     public void decrementProductQuantity(String productName) {
         Cursor cursor = getProductInformation(productName);
-        Product product = new Product(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getString(4));
+        Product product = new Product(cursor.getString(1), cursor.getInt(2),
+                cursor.getString(3), cursor.getString(4), cursor.getString(5));
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(ProductDBContract.productTable.PRODUCT_NAME, product.getProductName());
         values.put(ProductDBContract.productTable.PRODUCT_QUANTITY, product.getProductQuantity() - 1);
         values.put(ProductDBContract.productTable.PRODUCT_PRICE, product.getProductPrice());
         values.put(ProductDBContract.productTable.PRODUCT_EMAIL, product.getProductEmail());
+        values.put(ProductDBContract.productTable.PRODUCT_URI, product.getProductUri());
         db.update(ProductDBContract.productTable.TABLE_NAME, values, ProductDBContract.productTable.PRODUCT_NAME + " = '" + productName + "'", null);
         db.close();
     }

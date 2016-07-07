@@ -15,6 +15,7 @@ public class ProductDBContract {
         public static final String PRODUCT_QUANTITY = "productQuantity";
         public static final String PRODUCT_PRICE= "productPrice";
         public static final String PRODUCT_EMAIL= "productEmail";
+        public static final String PRODUCT_URI= "productUri";
 
         private static final String TEXT_TYPE = " TEXT NOT NULL";
         private static final String INTEGER_TYPE = " INTEGER DEFAULT 0";
@@ -25,7 +26,8 @@ public class ProductDBContract {
                 PRODUCT_NAME,
                 PRODUCT_QUANTITY,
                 PRODUCT_PRICE,
-                PRODUCT_EMAIL
+                PRODUCT_EMAIL,
+                PRODUCT_URI
         };
 
 
@@ -36,7 +38,8 @@ public class ProductDBContract {
                         productTable.PRODUCT_NAME + TEXT_TYPE + COMMA_SEP +
                         productTable.PRODUCT_QUANTITY + INTEGER_TYPE + COMMA_SEP +
                         productTable.PRODUCT_PRICE +  TEXT_TYPE + COMMA_SEP +
-                        productTable.PRODUCT_EMAIL +  TEXT_TYPE + " )";
+                        productTable.PRODUCT_EMAIL +  TEXT_TYPE + COMMA_SEP +
+                        productTable.PRODUCT_URI +  TEXT_TYPE + " )";
 
         // Set the drop table sentence
         public static final String SQL_DELETE_TABLE =

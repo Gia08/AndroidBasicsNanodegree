@@ -22,8 +22,9 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Quantity you want to increment"
+        android:hint="@string/hint_increment"
         android:id="@+id/inputIncrementQuantity"
+        android:inputType="number"
         android:layout_marginTop="35dp"
         android:layout_below="@+id/textIncrementTitle"
         android:layout_alignRight="@+id/textIncrementTitle"
@@ -32,7 +33,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apply!"
+        android:text="@string/apply_change"
         android:id="@+id/btnIncrement"
         android:layout_marginTop="46dp"
         android:onClick="incrementProductQuantity"

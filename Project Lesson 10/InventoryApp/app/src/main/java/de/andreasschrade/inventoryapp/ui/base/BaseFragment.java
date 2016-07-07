@@ -5,9 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.ButterKnife;
-
-
 /**
  * The base class for all fragment classes.
  *
@@ -25,7 +22,6 @@ public class BaseFragment extends Fragment {
      */
     public View inflateAndBind(LayoutInflater inflater, ViewGroup container, int layout) {
         View view = inflater.inflate(layout, container, false);
-        ButterKnife.bind(this, view);
 
         return view;
     }

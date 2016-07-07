@@ -2,7 +2,10 @@ package de.andreasschrade.inventoryapp.ui;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +13,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 
 import de.andreasschrade.inventoryapp.R;
 import de.andreasschrade.inventoryapp.ui.base.BaseActivity;
@@ -25,10 +33,13 @@ public class ProductDetailActivity extends BaseActivity {
     String productPrice;
     String productQuantity;
     String productEmail;
+    String productUri;
 
     TextView productNameValue;
     TextView productPriceValue;
     TextView productQuantityValue;
+
+    ImageView productImage;
 
 
     @Override
@@ -42,15 +53,28 @@ public class ProductDetailActivity extends BaseActivity {
         productPriceValue = (TextView) findViewById(R.id.textPriceValue);
         productQuantityValue = (TextView) findViewById(R.id.textQuantityValue);
 
+        productImage = (ImageView) findViewById(R.id.imageProduct);
+
         Intent myIntent = getIntent();
         productName = myIntent.getStringExtra("productName");
         productPrice = myIntent.getStringExtra("productPrice");
         productQuantity = myIntent.getStringExtra("productQuantity");
         productEmail = myIntent.getStringExtra("productEmail");
+        productUri = myIntent.getStringExtra("productUri");
 
         productNameValue.setText(productName);
         productPriceValue.setText(productPrice);
         productQuantityValue.setText(productQuantity);
+
+        // Set product image
+        Uri imageUri = Uri.parse(productUri);
+        try {
+            Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+            productImage.setImageBitmap(bitmap);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
 
     }

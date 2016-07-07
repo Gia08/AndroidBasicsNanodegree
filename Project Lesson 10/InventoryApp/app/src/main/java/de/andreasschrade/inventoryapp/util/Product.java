@@ -10,16 +10,19 @@ public class Product {
     private int productQuantity;
     private String productPrice;
     private String productEmail;
+    private String productUri;
 
     public Product(){
 
     }
 
-    public Product(String productName, int productQuantity, String productPrice, String productEmail){
+    public Product(String productName, int productQuantity, String productPrice, String productEmail,
+                   String productUri){
         this.setProductName(productName);
         this.setProductQuantity(productQuantity);
         this.setProductPrice(productPrice);
         this.setProductEmail(productEmail);
+        this.setProductUri(productUri);
     }
 
     public String getProductID() {
@@ -62,6 +65,10 @@ public class Product {
         this.productEmail = productEmail;
     }
 
+    public String getProductUri() {  return productUri;  }
+
+    public void setProductUri(String productUri) {  this.productUri = productUri; }
+
     @Override
     public String toString() {
         String outResult = "";
@@ -71,6 +78,5 @@ public class Product {
         outResult = outResult + "Product Email: " + getProductEmail() + "\n";
         return outResult;
     }
-
 
 }

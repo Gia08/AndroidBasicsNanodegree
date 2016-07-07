@@ -22,7 +22,8 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="New Product Price"
+        android:hint="@string/hint_new_price"
+        android:inputType="numberDecimal"
         android:id="@+id/inputEditPrice"
         android:layout_marginTop="44dp"
         android:layout_centerHorizontal="true"
@@ -31,7 +32,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apply Change!"
+        android:text="@string/apply_change"
         android:id="@+id/btnProductPrice"
         android:layout_marginTop="39dp"
         android:onClick="editProductPrice"

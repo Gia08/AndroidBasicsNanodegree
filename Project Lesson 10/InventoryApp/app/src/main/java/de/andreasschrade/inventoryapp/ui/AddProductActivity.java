@@ -1,12 +1,21 @@
 package de.andreasschrade.inventoryapp.ui;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.app.ActionBar;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 import de.andreasschrade.inventoryapp.R;
 import de.andreasschrade.inventoryapp.ui.base.BaseActivity;
@@ -21,6 +30,12 @@ public class AddProductActivity extends BaseActivity {
     EditText inputProductPrice;
     EditText inputProductEmail;
 
+    ImageView imageProduct;
+    String productUri;
+
+    private static int RESULT_LOAD_IMG = 100;
+    String imagePicturePath;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +46,10 @@ public class AddProductActivity extends BaseActivity {
         inputProductQuantity = (EditText) findViewById(R.id.inputProductQuantity);
         inputProductPrice = (EditText) findViewById(R.id.inputProductPrice);
         inputProductEmail = (EditText) findViewById(R.id.inputEmail);
+
+        imageProduct = (ImageView) findViewById(R.id.imageNewProduct);
+
+        productUri = "";
 
         setupToolbar();
     }
@@ -70,7 +89,11 @@ public class AddProductActivity extends BaseActivity {
 
     public void addProduct(View v){
 
-        if (inputProductName.getText().toString().matches("") |
+        if (productUri.matches("")){
+            Toast.makeText(AddProductActivity.this, "Please select an image for the new product!",
+                    Toast.LENGTH_LONG).show();
+        }
+        else if (inputProductName.getText().toString().matches("") |
             inputProductQuantity.getText().toString().matches("") |
             inputProductEmail.getText().toString().matches("") |
             inputProductPrice.getText().toString().matches("")) {
@@ -83,13 +106,43 @@ public class AddProductActivity extends BaseActivity {
             int productQuantity = Integer.parseInt(inputProductQuantity.getText().toString());
             String productPrice = inputProductPrice.getText().toString();
             String productEmail = inputProductEmail.getText().toString();
-            productDataHelper.addNewProduct(new Product(productName, productQuantity, productPrice, productEmail));
+            productDataHelper.addNewProduct(new Product(productName, productQuantity, productPrice,
+                                            productEmail, productUri));
             inputProductName.setText("");
             inputProductQuantity.setText("");
             inputProductPrice.setText("");
             inputProductEmail.setText("");
+            imageProduct.setImageResource(android.R.color.transparent);
             Toast.makeText(AddProductActivity.this, "Product added!", Toast.LENGTH_LONG).show();
         }
+    }
 
+    public void addImageProduct(View v){
+        Intent intent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        intent.setType("image/*");
+        startActivityForResult(intent, RESULT_LOAD_IMG);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
+        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+
+
+        if (requestCode == RESULT_LOAD_IMG && resultCode == RESULT_OK
+                && null != imageReturnedIntent) {
+            if(resultCode == RESULT_OK){
+                Uri selectedImage = imageReturnedIntent.getData();
+                productUri = selectedImage.toString();
+
+                InputStream imageStream = null;
+                try {
+                    imageStream = getContentResolver().openInputStream(selectedImage);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                Bitmap imageResult = BitmapFactory.decodeStream(imageStream);
+                imageProduct.setImageBitmap(imageResult);
+            }
+        }
     }
 }
